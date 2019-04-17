@@ -1,7 +1,7 @@
 package edu.osucascades.guevarra;
 
 public class Marathon {
-    public void getLowestTime(){
+    public void getLowestTime(int array[], String[] args){
 
     }
     public static void main(String[] args) {
