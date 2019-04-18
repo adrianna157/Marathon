@@ -1,5 +1,5 @@
 package edu.osucascades.guevarra;
-
+//Created Marathon Class
 public class Marathon {
     public static void main(String[] args) {
         String[] names = {
@@ -14,11 +14,13 @@ public class Marathon {
 
         int lose = slowestIndex(times);
         int second = secondFastestIndex(times);
+        //The %s is replaced with the times value (below in the example).
+        //The %n tells the console print it in a new line.
+        //%d specifies that the single variable is a decimal integer.
         System.out.printf("The slowest runner is: %s (%d Minutes)%n", names[lose], times[lose]);
-
         System.out.printf("The second lowest runner is: %s (%d Minutes)%n", names[second], times[second]);
     }
-
+    //Retrieves slowest runner
     public static int slowestIndex(int[] times)
     {
 
@@ -36,7 +38,7 @@ public class Marathon {
         return slowestIndex;
 
     }
-
+    //Retrieves fastest runner
     public static int fastestIndex(int[] times)
     {
 
@@ -54,7 +56,7 @@ public class Marathon {
         return fastestIndex;
 
     }
-
+    //Return second fastest runner
     public static int secondFastestIndex(int[] times)
     {
         int fastestIdx = fastestIndex(times);
