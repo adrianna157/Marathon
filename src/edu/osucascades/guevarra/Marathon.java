@@ -37,6 +37,39 @@ public class Marathon {
 
     }
 
+    public static int fastestIndex(int[] times)
+    {
+
+        int fastestIndex = 0;
+
+        for (int counter = 0; counter < times.length; counter++)
+        {
+
+            if (times[counter] < times[fastestIndex])
+            {
+                fastestIndex = counter;
+            }
+        }
+
+        return fastestIndex;
+
+    }
+
+    public static int secondFastestIndex(int[] times)
+    {
+        int fastestIdx = fastestIndex(times);
+        int secondFastestIdx = 0;
+
+        for (int counter = 0; counter < times.length; counter++)
+        {
+
+            if (times[counter] < times[secondFastestIdx] && counter != fastestIdx)
+            {
+                secondFastestIdx = counter;
+            }
+        }
+
+        return secondFastestIdx;
     }
 
 
